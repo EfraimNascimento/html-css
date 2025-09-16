@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo Vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+
+    <video width="560" controls poster="imagens/limoes-capa.png" autoplay loop>
+        <!--A ordem tem importância, uma vez que ele irá tentar reproduzir um a um na ordem dos sources abaixo-->
+
+        <source src="midia/meu-video.mp4" type="video/mp4">
+        <source src="midia/meu-video.m4v" type="video/mp4">
+        <source src="midia/meu-video.webm" type="video/webm">
+        <source src="midia/meu-video.ogv" type="video/ogg">
+
+        <p>Seu navegador não tem compatibilidade com reprodução de vídeo</p>
+        
+        <!--Esta forma é local portanto irá gerar custos para o cliente por conta dos downloads que serão necessários a cada acesso, neste caso é necessário informar o cliente deste custo.-->
+    </video>
+
+    <h1>Inserindo vídeos do Youtube</h1>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/sbgYaeerXhg?si=FG06bWX6P4k4w2Jw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <!--Esta forma de hospedagem é indeireta, neste caso o vídeo está hospedado no youtube, infelizmente este vídeo deve ser público para que seja possivel a utilização deste método-->
+
+</body>
+</html>
