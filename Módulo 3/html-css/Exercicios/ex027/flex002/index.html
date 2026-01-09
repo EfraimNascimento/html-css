@@ -15,6 +15,20 @@
 
     /*No caso da utilização do flex-direction: column, temos o main-axis vertical, que começa no topo e vai até a parte inferior do elemento, seu ponto inicial se chama (main-start) e o final se chama (main-end), o cross-axis começa na esquerda (cross-start) e vai até a parte direita (cross-end) do elemento, e estes valores se alteram de acordo com a inversão da direção da coluna*/
 
+    /*Flex-wrap
+
+    Por padrão o valor deste atributo é: nowrap, oque faz com que o conteudo não seja cortado, os itens flexíveis são dispostos em uma única linha, o que pode fazer com que eles encolham para caber no contêiner flexível. No entanto, podemos alterar esse comportamento usando a propriedade flex-wrap.
+
+    O valor flex-wrap: wrap; permite que os itens flexíveis sejam distribuídos em várias linhas, se necessário. Quando o espaço disponível no contêiner pai flexível não é suficiente para acomodar todos os itens em uma única linha, eles serão movidos para a próxima linha.
+
+    Quando utilizamos o flex-wrap: wrap;, o item que não coube no conteiner pai será movido para a próxima linha em caso do flex-direction estar configurado como row, ou para a próxima coluna, caso o flex-direction esteja configurado como column.
+    isso ocorre pois a quebra de linha ou coluna é feita de acordo com o cross-axis seguindo a orientação do mesmo.
+
+    Possuimos tambem o valor wrap-reverse, que inverte a ordem das linhas ou colunas quando ocorre a quebra, ou seja, a primeira linha ou coluna que seria exibida na parte superior ou esquerda do contêiner flexível será exibida na parte inferior ou direita, respectivamente.
+    */
+    
+    */
+
     div.container{
         background-color: lightsalmon;
         display: flex;
@@ -23,7 +37,7 @@
         background-color: lightblue;
         border: 1px solid black;
         padding: 10px;
-        
+
 
         text-align: center;
     }
