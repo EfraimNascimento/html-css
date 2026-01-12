@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible box</title>
+</head>
+<style>
+
+    /*Utilizando flex-direction: row, temos um eixo horizontal chamado main-axis, ele começa na esquerda e vai até a direita do elemento, seu ponto inicial se chama main-start e o final se chama main-end*/
+
+    /*Temos também o eixo transversal, chamado cross-axis, que começa no topo (cross-start) e vai até a parte inferior (cross-end) do elemento*/
+
+    /*Estas configurações são válidas apenas em nosso idioma,considerando o sentido da leitura, além é claro do flex-direction, as posições vão variar de acordo com as configurações*/
+
+    /*No caso da utilização do flex-direction: column, temos o main-axis vertical, que começa no topo e vai até a parte inferior do elemento, seu ponto inicial se chama (main-start) e o final se chama (main-end), o cross-axis começa na esquerda (cross-start) e vai até a parte direita (cross-end) do elemento, e estes valores se alteram de acordo com a inversão da direção da coluna*/
+
+    /*
+    
+        Conteudo empacotado no container:
+        flex-wrap: nowrap; (padrão)
+        Conteudo quebrado em várias linhas:
+        flex-wrap: wrap;
+
+        align-content: flex-start; (alinha o conteudo no início do container de acordo com o cross-axis)
+        align-content: flex-end; (alinha o conteudo no final do container de acordo com o cross-axis)
+        align-content: center; (alinha o conteudo no centro do container de acordo com o cross-axis)
+        align-content: space-between; (distribui o conteudo com espaçamento entre as linhas do container de acordo com o cross-axis)
+        align-content: space-around; (distribui o conteudo com espaçamento ao redor das linhas do container de acordo com o cross-axis)
+        align-content: stretch; (estica o conteudo para preencher o container de acordo com o cross-axis)
+
+        Align-content é utilizado para decidir oque fazer com o espaço extra no container quando há várias linhas de itens flexíveis.
+
+
+    */
+
+    div.container{
+        background-color: lightsalmon;
+        height: 400px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        align-content: space-around;
+    }
+    div.iten{
+        background-color: lightblue;
+        border: 1px solid black;
+        padding: 40px;
+
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="iten">A</div>
+        <div class="iten">B</div>
+        <div class="iten">C</div>
+        <div class="iten">D</div>
+        <div class="iten">E</div>
+        <div class="iten">F</div>
+        <div class="iten">G</div>
+        <div class="iten">H</div>
+        <div class="iten">I</div>
+        <div class="iten">J</div>
+        <div class="iten">K</div>
+        <div class="iten">L</div>
+        <div class="iten">M</div>
+
+    </div>
+</body>
+</html>

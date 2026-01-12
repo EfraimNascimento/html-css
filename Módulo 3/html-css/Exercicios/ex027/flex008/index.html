@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible box</title>
+</head>
+<style>
+
+    /*Utilizando flex-direction: row, temos um eixo horizontal chamado main-axis, ele começa na esquerda e vai até a direita do elemento, seu ponto inicial se chama main-start e o final se chama main-end*/
+
+    /*Temos também o eixo transversal, chamado cross-axis, que começa no topo (cross-start) e vai até a parte inferior (cross-end) do elemento*/
+
+    /*Estas configurações são válidas apenas em nosso idioma,considerando o sentido da leitura, além é claro do flex-direction, as posições vão variar de acordo com as configurações*/
+
+    /*No caso da utilização do flex-direction: column, temos o main-axis vertical, que começa no topo e vai até a parte inferior do elemento, seu ponto inicial se chama (main-start) e o final se chama (main-end), o cross-axis começa na esquerda (cross-start) e vai até a parte direita (cross-end) do elemento, e estes valores se alteram de acordo com a inversão da direção da coluna*/
+
+    /*
+    estas propriedade são aplicadas diretamente nos itens flexíveis, e não no contêiner flexível.
+    
+    A propriedade order, define a ordem de exibição dos itens flexíveis, por padrão todos os itens possuem o valor 0, mas podemos alterar este valor para qualquer número inteiro positivo ou negativo, e assim alterar a ordem de exibição dos itens.
+
+    align-self: esta propriedade permite que um item flexível se alinhe de forma diferente dos outros itens flexíveis dentro do contêiner flexível. Podemos definir valores como auto, flex-start, flex-end, center, baseline e stretch, para cada item individualmente de acordo com o cross-axis do container pai.
+
+    auto: ira herdar o valor definido no contêiner flexível.
+    flex-start: alinha o item ao início do cross-axis.
+    flex-end: alinha o item ao final do cross-axis.
+    center: alinha o item ao centro do cross-axis.
+    stretch: estica o item para preencher o contêiner flexível no cross-axis.
+
+
+    */
+
+    div.container{
+        background-color: lightsalmon;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        height: 400px;
+    }
+    div.iten{
+        background-color: lightblue;
+        border: 1px solid black;
+        text-align: center;
+        padding: 20px;
+        
+    }
+
+    div#i1{
+        
+    }
+
+    
+    div#i2{
+        align-self: auto;
+    }
+
+    
+    div#i3{
+        align-self: flex-end;
+    }
+
+    
+    div#i4{
+       
+    }
+
+    
+    div#i5{
+        align-self: center;
+    }
+
+    
+    div#i6{
+       align-self: flex-start;
+    }
+
+    
+    div#i7{
+        align-self: stretch;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="iten" id="i1">A</div>
+        <div class="iten" id="i2">B</div>
+        <div class="iten" id="i3">C</div>
+        <div class="iten" id="i4">D</div>
+        <div class="iten" id="i5">E</div>
+        <div class="iten" id="i6">F</div>
+        <div class="iten" id="i7">G</div>
+        
+    </div>
+</body>
+</html>
