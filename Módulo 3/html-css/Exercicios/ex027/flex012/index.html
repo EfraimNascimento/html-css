@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible box</title>
+</head>
+<style>
+
+    /*
+    
+    Propriedade Flex: = flex-grow | flex-shrink | flex-basis;
+
+    Se trata de um short-hand para as propriedades flex-grow, flex-shrink e flex-basis juntas, recomendado para o uso em flexbox pela própria W3C.
+
+    Valores mais comuns:
+    flex: 0 1 auto; (padrão) ou flex: initial;
+    flex: 0 0 auto; ou flex: none;
+    flex: 1 1 auto; ou flex: auto;
+    flex: 3; ou flex: 3 1 auto; = quando utilizamos apenas um valor, ele é referente ao flex-grow, as outras propriedades assumem os valores padrão.
+
+    */
+
+
+    div.container{
+        background-color: lightsalmon;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    div.iten{
+        background-color: lightblue;
+        text-align: center;
+        border: 1px solid black;
+        flex-basis: 200px;
+
+    }
+    div#cxA{
+        /* flex-shrink: 0;
+        flex-grow: 1;
+        flex-basis: 200px; */
+
+        flex: 1 0 200px;
+    }
+    div#cxB{
+        /* flex-shrink: 1;
+        flex-grow: 1;
+        flex-basis: 150px; */
+
+        flex: 1 1 150px;
+    }
+    div#cxC{
+        /* flex-shrink: 8;
+        flex-grow: 1;
+        flex-basis: auto; */
+
+        flex: 1 8 auto;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="iten" id="cxA">A</div>
+        <div class="iten" id="cxB">B</div>
+        <div class="iten" id="cxC">C</div>
+        
+    </div>
+</body>
+</html>
